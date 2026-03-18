@@ -1,0 +1,60 @@
+body {
+  font-family: "Calibri", sans-serif;
+  font-size: 1.3em;
+  color: #00008b;
+}
+.main-header {
+  font-size: 1.7em;
+  text-align: center;
+  font-weight: bold;
+  border-top: 2px solid #000;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.scroll-text {
+  width: 600px;
+  height: 200px;
+  margin: 0 auto;
+  text-align: justify;
+  overflow-y: auto;
+  background-color: rgba(69, 152, 230, 0.2);
+  border: 2px dashed #000080;
+  padding: 10px;
+}
+
+.text-link {
+  font-weight: bold;
+  text-align: center;
+}
+
+.link {
+  color: green;
+}
+
+.table {
+  width: 600px;
+  table-layout: fixed;
+  margin-left: auto;
+  border-collapse: collapse;
+  margin-right: 500px;
+}
+
+.table td {
+  border: 1px solid #777;
+  padding: 10px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: circle;
+  margin-left: 100px;
+  margin-top: 200px;
+}
+
+.multi-colored-text {
+  text-align: center;
+  font-weight: bold;
+}
