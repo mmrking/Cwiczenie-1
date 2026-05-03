@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formularz Rejestracji</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Rejestracja użytkownika</h3>
+      <form id="regForm">
+        <label>Nazwa użytkownika:</label>
+        <input type="text" id="username" placeholder="Tylko litery i cyfry" />
+
+        <label>Email:</label>
+        <input type="text" id="email" placeholder="email@przyklad.pl" />
+
+        <label>Hasło:</label>
+        <input type="password" id="pass1" />
+
+        <label>Powtórz hasło:</label>
+        <input type="password" id="pass2" />
+
+        <label>Data urodzenia:</label>
+        <input type="date" id="birthdate" />
+
+        <label>Płeć:</label>
+        <select id="gender">
+          <option value="">--Wybierz--</option>
+          <option value="Mężczyzna">Mężczyzna</option>
+          <option value="Kobieta">Kobieta</option>
+          <option value="Nie chcę podawać">Nie chcę podawać</option>
+        </select>
+
+        <label>Wybierz plan:</label>
+        <div class="radio-group">
+          <input type="radio" name="plan" value="Wersja darmowa" checked />
+          Darmowa
+          <input type="radio" name="plan" value="Wersja standardowa" /> Standard
+          <input type="radio" name="plan" value="Wersja premium" /> Premium
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" /> Akceptuję regulamin
+        </div>
+
+        <div class="button-group">
+          <button type="button" onclick="validateForm()">
+            Zarejestruj się
+          </button>
+          <button type="reset">Wyczyść</button>
+        </div>
+      </form>
+
+      <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
