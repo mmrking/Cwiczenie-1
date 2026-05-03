@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+.container {
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}

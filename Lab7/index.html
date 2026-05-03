@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dzielenie liczb z obsługą wyjątków</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Kalkulator dzielenia</h3>
+      <input type="text" id="num1" placeholder="Wpisz pierwszą liczbę" />
+      <input type="text" id="num2" placeholder="Wpisz drugą liczbę" />
+      <button onclick="divideNumbers()">Podziel</button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function divideNumbers() {
+        const resDiv = document.getElementById("result");
+        const val1 = document.getElementById("num1").value.replace(",", ".");
+        const val2 = document.getElementById("num2").value.replace(",", ".");
+
+        resDiv.className = "";
+        resDiv.innerHTML = "";
+
+        try {
+          // Проверка на пустые поля
+          if (val1 === "" || val2 === "") {
+            throw new Error("Proszę wypełnić oba pola.");
+          }
+
+          const n1 = parseFloat(val1);
+          const n2 = parseFloat(val2);
+
+          // Проверка на корректность чисел
+          if (isNaN(n1) || isNaN(n2)) {
+            throw new Error("Wprowadzono nieprawidłowe dane. Wpisz liczby.");
+          }
+
+          // Проверка деления на ноль
+          if (n2 === 0) {
+            throw new Error("Błąd: Dzielenie przez zero jest niemożliwe.");
+          }
+
+          // Вывод результата
+          const result = n1 / n2;
+          resDiv.innerHTML = "Wynik: " + result;
+          resDiv.classList.add("success");
+        } catch (error) {
+          // Вывод ошибки
+          resDiv.innerHTML = error.message;
+          resDiv.classList.add("error");
+          console.error("Wystąpił błąd:", error.message);
+        }
+      }
+    </script>
+  </body>
+</html>
